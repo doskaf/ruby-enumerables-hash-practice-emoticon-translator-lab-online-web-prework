@@ -21,4 +21,7 @@ end
 
 def get_english_meaning(file_path = './lib/emoticons.yml', japanese_emoticon)
   emote_library = load_library(file_path)
+  if emote_library["get_meaning"].include?(japanese_emoticon)
+    emote_library["get_meaning"][japanese_emoticon]
+  end
 end
